@@ -5,8 +5,6 @@ Version:	1.12
 Release:	18
 License:	MIT
 Group:		Development/Debuggers
-Group(de):	Entwicklung/Debugger
-Group(pl):	Programowanie/Odpluskwiacze
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/debuggers/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png

@@ -2,7 +2,7 @@ Summary:	An X Window System graphical interface for the GNU gdb debugger
 Summary(pl):	Graficzny interfejs pod X Window do debuggera gdb
 Name:		xxgdb
 Version:	1.12
-Release:	18
+Release:	19
 License:	MIT
 Group:		Development/Debuggers
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/debuggers/%{name}-%{version}.tar.gz

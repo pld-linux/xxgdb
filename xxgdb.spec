@@ -2,18 +2,20 @@ Summary:	An X Window System graphical interface for the GNU gdb debugger
 Summary(pl):	Graficzny interfejs pod X Window do debuggera gdb
 Name:		xxgdb
 Version:	1.12
-Release:	10
+Release:	18
 License:	MIT
 Group:		Development/Debuggers
 Group(de):	Entwicklung/Debugger
 Group(pl):	Programowanie/Odpluskwiacze
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/debuggers/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
-Patch0:		%{name}-1.08-glibc.patch
-Patch1:		%{name}-1.12-sysv.patch
-Patch2:		%{name}-1.12-compat21.patch
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Source2:	%{name}.png
+Patch0:		%{name}-glibc.patch
+Patch1:		%{name}-sysv.patch
+Patch2:		%{name}-compat21.patch
+BuildRequires:	XFree86-devel
 Requires:	gdb
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -45,17 +47,21 @@ przegl±danie plików ¼ród³owych i funkcji.
 %patch2 -p1
 
 %build
-xmkmf
-%{__make} CXXDEBUGFLAGS="%{rpmcflags}" \
-	CDEBUGFLAGS="%{rpmcflags}"
+xmkmf -a
+%{__make} \
+	CC=%{__cc} \
+	CXXDEBUGFLAGS="%{rpmcflags}" \
+	CDEBUGFLAGS="%{rpmcflags}" \
+	DEFGDB="-DGDB -DCREATE_IO_WINDOW"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Development,%{_pixmapsdir}}
 
 %{__make} install install.man DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Development
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
+install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -63,6 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/xxgdb
-%config %{_libdir}/X11/app-defaults/XDbx
+%{_libdir}/X11/app-defaults/XDbx
 %{_mandir}/man1/xxgdb.1x*
 %{_applnkdir}/Development/xxgdb.desktop
+%{_pixmapsdir}/*

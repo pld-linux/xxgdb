@@ -19,8 +19,6 @@ BuildRequires:	XFree86-devel
 Requires:	gdb
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Xxgdb is an X Window System graphical interface to the GNU gdb

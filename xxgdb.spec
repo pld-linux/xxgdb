@@ -6,7 +6,7 @@ Summary(ru):	X-интерфейс к отладчику gdb
 Summary(uk):	X-╕нтерфейс до в╕дладчика gdb
 Name:		xxgdb
 Version:	1.12
-Release:	19
+Release:	20
 License:	MIT
 Group:		Development/Debuggers
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/debuggers/%{name}-%{version}.tar.gz
@@ -83,7 +83,7 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Development,%{_pixmapsdir}}
 %{__make} install install.man DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
-install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT

@@ -1,0 +1,12 @@
+--- xxgdb-1.12/filemenu.c.compat21	Mon Aug 29 15:38:28 1994
++++ xxgdb-1.12/filemenu.c	Sun Jan 17 15:10:06 1999
+@@ -101,6 +101,9 @@
+ #include <sys/dir.h>
+ #endif
+ #endif /* SYSV */
++#if __i386__
++#define	wchar_t	__X_wchar_t	/* XXX avoid i386 glibc-2.1 typedef conflict */
++#endif
+ #include "global.h"
+ 
+ #define MAXCOLUMNS      8               /* max number of columns in file menu */

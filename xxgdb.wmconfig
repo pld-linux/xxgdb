@@ -1,0 +1,6 @@
+xxgdb name "xxgdb"
+xxgdb description "Graphical Debugger"
+xxgdb icon debug2_3d.xpm
+xxgdb mini-icon mini-bug1.xpm
+xxgdb exec "xxgdb &"
+xxgdb group Utilities

@@ -38,6 +38,9 @@ kontrola wykonywania programu poprzez breakpointy, sprawdzanie i
 przegl±danie stosu, wy¶wietlanie zmiennych i struktur danych,
 przegl±danie plików ¼ród³owych i funkcji.
 
+Zainstaluj pakiet xxgdb, je¿eli chcesz mieæ interfejs graficzny do
+debuggera GNU gdb. Musisz mieæ równie¿ zainstalowany pakiet gdb.
+
 %prep
 %setup -q
 %patch0 -p1

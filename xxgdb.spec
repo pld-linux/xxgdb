@@ -10,6 +10,7 @@ Release:	20
 License:	MIT
 Group:		Development/Debuggers
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/debuggers/%{name}-%{version}.tar.gz
+# Source0-md5:	d7e447aeb9cab29a90d9d65f8f9a306c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-glibc.patch

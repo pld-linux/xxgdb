@@ -1,8 +1,11 @@
+[Desktop Entry]
 Name=xxgdb
-Comment=Graphical Debugger
-Icon=debug2_3d.xpm
-Exec=xxgdb
-Terminal=0
 Type=Application
+Comment=bare-bones graphical debugger
+Comment[de]=Ein einfacher graphischer Debugger
+Comment[pl]=Graficzny interfejs pod X Window do debuggera gdb
+Comment[sv]=Mycket simpelt grafiskt felsökningsverktyg
+Icon=xxgdb.png
+Exec=xxgdb
 
 # vi: encoding=utf-8

@@ -7,8 +7,8 @@ License:	MIT
 Group:		Development/Debuggers
 Group(de):	Entwicklung/Debugger
 Group(pl):	Programowanie/Odpluskwiacze
-Source:		ftp://sunsite.unc.edu/pub/Linux/devel/debuggers/%{name}-%{version}.tar.gz
-Source1:	%{name}.wmconfig
+Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/debuggers/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
 Patch0:		%{name}-1.08-glibc.patch
 Patch1:		%{name}-1.12-sysv.patch
 Patch2:		%{name}-1.12-compat21.patch
@@ -19,15 +19,24 @@ Requires:	gdb
 %define		_mandir		%{_prefix}/man
 
 %description
-Xxgdb is an X Window System graphical interface to the GNU gdb debugger.
-Xxgdb provides visual feedback and supports a mouse interface for the
-user who wants to perform debugging tasks like the following:  controlling
-program execution through breakpoints, examining and traversing the
-function call stack, displaying values of variables and data structures,
-and browsing source files and functions.
+Xxgdb is an X Window System graphical interface to the GNU gdb
+debugger. Xxgdb provides visual feedback and supports a mouse
+interface for the user who wants to perform debugging tasks like the
+following: controlling program execution through breakpoints,
+examining and traversing the function call stack, displaying values of
+variables and data structures, and browsing source files and
+functions.
 
-Install the xxgdb package if you'd like to use a graphical interface with
-the GNU gdb debugger.  You'll also need to have the gdb package installed.
+Install the xxgdb package if you'd like to use a graphical interface
+with the GNU gdb debugger. You'll also need to have the gdb package
+installed.
+
+%description -l pl
+xxgdb to graficzny interfejs dla X Window System do debuggera GNU gdb.
+xxgdb daje wizualny interfejs z obs³ug± myszy do takich zadañ jak:
+kontrola wykonywania programu poprzez breakpointy, sprawdzanie i
+przegl±danie stosu, wy¶wietlanie zmiennych i struktur danych,
+przegl±danie plików ¼ród³owych i funkcji.
 
 %prep
 %setup -q
@@ -45,8 +54,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install install.man DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/etc/X11/wmconfig
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/xxgdb
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Development
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -54,6 +63,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/xxgdb
-%config /usr/X11R6/lib/X11/app-defaults/XDbx
+%config %{_libdir}/X11/app-defaults/XDbx
 %{_mandir}/man1/xxgdb.1x*
-/etc/X11/wmconfig/xxgdb
+%{_applnkdir}/Development/xxgdb.desktop

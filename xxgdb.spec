@@ -1,19 +1,22 @@
-Summary:	An X Window System graphical interface for the GNU gdb debugger.
+Summary:	An X Window System graphical interface for the GNU gdb debugger
+Summary(pl):	Graficzny interfejs pod X Window do debuggera gdb
 Name:		xxgdb
 Version:	1.12
 Release:	10
-Copyright:	MIT
+License:	MIT
 Group:		Development/Debuggers
+Group(de):	Entwicklung/Debugger
+Group(pl):	Programowanie/Odpluskwiacze
 Source:		ftp://sunsite.unc.edu/pub/Linux/devel/debuggers/%{name}-%{version}.tar.gz
-Source1:	xxgdb.wmconfig
-Patch0:		xxgdb-1.08-glibc.patch
-Patch1:		xxgdb-1.12-sysv.patch
-Patch2:		xxgdb-1.12-compat21.patch
+Source1:	%{name}.wmconfig
+Patch0:		%{name}-1.08-glibc.patch
+Patch1:		%{name}-1.12-sysv.patch
+Patch2:		%{name}-1.12-compat21.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	gdb
 
 %define		_prefix		/usr/X11R6
-%define		_mandir		/usr/X11R6/man
+%define		_mandir		%{_prefix}/man
 
 %description
 Xxgdb is an X Window System graphical interface to the GNU gdb debugger.
@@ -34,8 +37,8 @@ the GNU gdb debugger.  You'll also need to have the gdb package installed.
 
 %build
 xmkmf
-%{__make} CXXDEBUGFLAGS="$RPM_OPT_FLAGS" \
-	CDEBUGFLAGS="$RPM_OPT_FLAGS"
+%{__make} CXXDEBUGFLAGS="%{rpmcflags}" \
+	CDEBUGFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -45,10 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/etc/X11/wmconfig
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/xxgdb
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_bindir}/xxgdb
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/xxgdb.1x
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -56,5 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/xxgdb
 %config /usr/X11R6/lib/X11/app-defaults/XDbx
-%{_mandir}/man1/xxgdb.1x.gz
+%{_mandir}/man1/xxgdb.1x*
 /etc/X11/wmconfig/xxgdb

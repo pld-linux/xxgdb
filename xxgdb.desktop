@@ -7,4 +7,5 @@ Comment[pl]=Graficzny interfejs pod X Window do debuggera gdb
 Comment[sv]=Mycket simpelt grafiskt felsökningsverktyg
 Icon=xxgdb.png
 Exec=xxgdb
+Encoding=UTF-8
 # vi: encoding=utf-8

@@ -1,5 +1,9 @@
 Summary:	An X Window System graphical interface for the GNU gdb debugger
+Summary(es):	Interface X para el depurador gdb
 Summary(pl):	Graficzny interfejs pod X Window do debuggera gdb
+Summary(pt_BR):	Interface X para o depurador gdb
+Summary(ru):	X-интерфейс к отладчику gdb
+Summary(uk):	X-╕нтерфейс до в╕дладчика gdb
 Name:		xxgdb
 Version:	1.12
 Release:	19
@@ -27,9 +31,11 @@ examining and traversing the function call stack, displaying values of
 variables and data structures, and browsing source files and
 functions.
 
-Install the xxgdb package if you'd like to use a graphical interface
-with the GNU gdb debugger. You'll also need to have the gdb package
-installed.
+%description -l es
+xxgdb es una interface grАfica para el debugger de GNU. Tiene la
+habilidad de enseЯar archivos fuente mientras se ejecutan, y
+configurar "breakpoints", paso a paso, a travИs de los comandos - todo
+con una interface grАfica X Window muy sencilla de usar.
 
 %description -l pl
 xxgdb to graficzny interfejs dla X Window System do debuggera GNU gdb.
@@ -38,8 +44,23 @@ kontrola wykonywania programu poprzez breakpointy, sprawdzanie i
 przegl╠danie stosu, wy╤wietlanie zmiennych i struktur danych,
 przegl╠danie plikСw ╪rСdЁowych i funkcji.
 
-Zainstaluj pakiet xxgdb, je©eli chcesz mieФ interfejs graficzny do
-debuggera GNU gdb. Musisz mieФ rСwnie© zainstalowany pakiet gdb.
+%description -l pt_BR
+xxgdb И uma interface grАfica para o debugger da GNU. Ele tem a
+habilidade de mostrar arquivos fonte enquanto eles sЦo executados,
+configura "breakpoints", e passo a passo atravИs dos comandos - tudo
+com uma interface grАfica X Window muito simples de se usar.
+
+%description -l ru
+xxgdb - это графический интерфейс к отладчику GNU Debugger (gdb).
+Позволяет показывать исходные файлы по мере исполнения кода,
+устанавливать точки отладочных остановов и исполнять команды по шагам
+- все через простой в использовании графический интерфейс X Window.
+
+%description -l uk
+xxgdb - це граф╕чний ╕нтерфейс до в╕дладчика GNU Debugger (gdb).
+Дозволя╓ показувати вих╕дн╕ файли в ход╕ виконання ╖х коду,
+встановлювати точки в╕дладочних зупинок и виконувати команди по крокам
+- все через простий у користуванн╕ граф╕чний ╕нтер╕ейс п╕д X Window.
 
 %prep
 %setup -q

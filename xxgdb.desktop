@@ -1,0 +1,8 @@
+Name=xxgdb
+Comment=Graphical Debugger
+Icon=debug2_3d.xpm
+Exec=xxgdb
+Terminal=0
+Type=Application
+
+# vi: encoding=utf-8

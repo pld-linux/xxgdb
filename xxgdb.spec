@@ -9,7 +9,7 @@ Source1:	xxgdb.wmconfig
 Patch0:		xxgdb-1.08-glibc.patch
 Patch1:		xxgdb-1.12-sysv.patch
 Patch2:		xxgdb-1.12-compat21.patch
-BuildRoot:	/tmp/%{name}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	gdb
 
 %define		_prefix		/usr/X11R6

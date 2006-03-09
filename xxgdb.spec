@@ -70,7 +70,7 @@ xxgdb - це граф╕чний ╕нтерфейс до в╕дладчика GNU Debugger (gdb).
 %build
 xmkmf -a
 %{__make} \
-	CC=%{__cc} \
+	CC="%{__cc}" \
 	CXXDEBUGFLAGS="%{rpmcflags}" \
 	CDEBUGFLAGS="%{rpmcflags}" \
 	DEFGDB="-DGDB -DCREATE_IO_WINDOW"

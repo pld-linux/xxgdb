@@ -1,9 +1,9 @@
 Summary:	An X Window System graphical interface for the GNU gdb debugger
-Summary(es.UTF-8):   Interface X para el depurador gdb
-Summary(pl.UTF-8):   Graficzny interfejs pod X Window do debuggera gdb
-Summary(pt_BR.UTF-8):   Interface X para o depurador gdb
-Summary(ru.UTF-8):   X-интерфейс к отладчику gdb
-Summary(uk.UTF-8):   X-інтерфейс до відладчика gdb
+Summary(es.UTF-8):	Interface X para el depurador gdb
+Summary(pl.UTF-8):	Graficzny interfejs pod X Window do debuggera gdb
+Summary(pt_BR.UTF-8):	Interface X para o depurador gdb
+Summary(ru.UTF-8):	X-интерфейс к отладчику gdb
+Summary(uk.UTF-8):	X-інтерфейс до відладчика gdb
 Name:		xxgdb
 Version:	1.12
 Release:	20

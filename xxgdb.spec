@@ -1,9 +1,9 @@
 Summary:	An X Window System graphical interface for the GNU gdb debugger
-Summary(es):	Interface X para el depurador gdb
-Summary(pl):	Graficzny interfejs pod X Window do debuggera gdb
-Summary(pt_BR):	Interface X para o depurador gdb
-Summary(ru):	X-интерфейс к отладчику gdb
-Summary(uk):	X-╕нтерфейс до в╕дладчика gdb
+Summary(es.UTF-8):   Interface X para el depurador gdb
+Summary(pl.UTF-8):   Graficzny interfejs pod X Window do debuggera gdb
+Summary(pt_BR.UTF-8):   Interface X para o depurador gdb
+Summary(ru.UTF-8):   X-п╦п╫я┌п╣я─я└п╣п╧я│ п╨ п╬я┌п╩п╟п╢я┤п╦п╨я┐ gdb
+Summary(uk.UTF-8):   X-я√п╫я┌п╣я─я└п╣п╧я│ п╢п╬ п╡я√п╢п╩п╟п╢я┤п╦п╨п╟ gdb
 Name:		xxgdb
 Version:	1.12
 Release:	20
@@ -30,36 +30,36 @@ examining and traversing the function call stack, displaying values of
 variables and data structures, and browsing source files and
 functions.
 
-%description -l es
-xxgdb es una interface grАfica para el debugger de GNU. Tiene la
-habilidad de enseЯar archivos fuente mientras se ejecutan, y
-configurar "breakpoints", paso a paso, a travИs de los comandos - todo
-con una interface grАfica X Window muy sencilla de usar.
+%description -l es.UTF-8
+xxgdb es una interface grц║fica para el debugger de GNU. Tiene la
+habilidad de enseц╠ar archivos fuente mientras se ejecutan, y
+configurar "breakpoints", paso a paso, a travц╘s de los comandos - todo
+con una interface grц║fica X Window muy sencilla de usar.
 
-%description -l pl
+%description -l pl.UTF-8
 xxgdb to graficzny interfejs dla X Window System do debuggera GNU gdb.
-xxgdb daje wizualny interfejs z obsЁug╠ myszy do takich zadaЯ jak:
+xxgdb daje wizualny interfejs z obsе┌ugд┘ myszy do takich zadaе└ jak:
 kontrola wykonywania programu poprzez breakpointy, sprawdzanie i
-przegl╠danie stosu, wy╤wietlanie zmiennych i struktur danych,
-przegl╠danie plikСw ╪rСdЁowych i funkcji.
+przeglд┘danie stosu, wyе⌡wietlanie zmiennych i struktur danych,
+przeglд┘danie plikцЁw е╨rцЁdе┌owych i funkcji.
 
-%description -l pt_BR
-xxgdb И uma interface grАfica para o debugger da GNU. Ele tem a
-habilidade de mostrar arquivos fonte enquanto eles sЦo executados,
-configura "breakpoints", e passo a passo atravИs dos comandos - tudo
-com uma interface grАfica X Window muito simples de se usar.
+%description -l pt_BR.UTF-8
+xxgdb ц╘ uma interface grц║fica para o debugger da GNU. Ele tem a
+habilidade de mostrar arquivos fonte enquanto eles sцёo executados,
+configura "breakpoints", e passo a passo atravц╘s dos comandos - tudo
+com uma interface grц║fica X Window muito simples de se usar.
 
-%description -l ru
-xxgdb - это графический интерфейс к отладчику GNU Debugger (gdb).
-Позволяет показывать исходные файлы по мере исполнения кода,
-устанавливать точки отладочных остановов и исполнять команды по шагам
-- все через простой в использовании графический интерфейс X Window.
+%description -l ru.UTF-8
+xxgdb - я█я┌п╬ пЁя─п╟я└п╦я┤п╣я│п╨п╦п╧ п╦п╫я┌п╣я─я└п╣п╧я│ п╨ п╬я┌п╩п╟п╢я┤п╦п╨я┐ GNU Debugger (gdb).
+п÷п╬п╥п╡п╬п╩я▐п╣я┌ п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╦я│я┘п╬п╢п╫я▀п╣ я└п╟п╧п╩я▀ п©п╬ п╪п╣я─п╣ п╦я│п©п╬п╩п╫п╣п╫п╦я▐ п╨п╬п╢п╟,
+я┐я│я┌п╟п╫п╟п╡п╩п╦п╡п╟я┌я▄ я┌п╬я┤п╨п╦ п╬я┌п╩п╟п╢п╬я┤п╫я▀я┘ п╬я│я┌п╟п╫п╬п╡п╬п╡ п╦ п╦я│п©п╬п╩п╫я▐я┌я▄ п╨п╬п╪п╟п╫п╢я▀ п©п╬ я┬п╟пЁп╟п╪
+- п╡я│п╣ я┤п╣я─п╣п╥ п©я─п╬я│я┌п╬п╧ п╡ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╦ пЁя─п╟я└п╦я┤п╣я│п╨п╦п╧ п╦п╫я┌п╣я─я└п╣п╧я│ X Window.
 
-%description -l uk
-xxgdb - це граф╕чний ╕нтерфейс до в╕дладчика GNU Debugger (gdb).
-Дозволя╓ показувати вих╕дн╕ файли в ход╕ виконання ╖х коду,
-встановлювати точки в╕дладочних зупинок и виконувати команди по крокам
-- все через простий у користуванн╕ граф╕чний ╕нтер╕ейс п╕д X Window.
+%description -l uk.UTF-8
+xxgdb - я├п╣ пЁя─п╟я└я√я┤п╫п╦п╧ я√п╫я┌п╣я─я└п╣п╧я│ п╢п╬ п╡я√п╢п╩п╟п╢я┤п╦п╨п╟ GNU Debugger (gdb).
+п■п╬п╥п╡п╬п╩я▐я■ п©п╬п╨п╟п╥я┐п╡п╟я┌п╦ п╡п╦я┘я√п╢п╫я√ я└п╟п╧п╩п╦ п╡ я┘п╬п╢я√ п╡п╦п╨п╬п╫п╟п╫п╫я▐ я≈я┘ п╨п╬п╢я┐,
+п╡я│я┌п╟п╫п╬п╡п╩я▌п╡п╟я┌п╦ я┌п╬я┤п╨п╦ п╡я√п╢п╩п╟п╢п╬я┤п╫п╦я┘ п╥я┐п©п╦п╫п╬п╨ п╦ п╡п╦п╨п╬п╫я┐п╡п╟я┌п╦ п╨п╬п╪п╟п╫п╢п╦ п©п╬ п╨я─п╬п╨п╟п╪
+- п╡я│п╣ я┤п╣я─п╣п╥ п©я─п╬я│я┌п╦п╧ я┐ п╨п╬я─п╦я│я┌я┐п╡п╟п╫п╫я√ пЁя─п╟я└я√я┤п╫п╦п╧ я√п╫я┌п╣я─я√п╣п╧я│ п©я√п╢ X Window.
 
 %prep
 %setup -q
